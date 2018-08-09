@@ -27,9 +27,9 @@
             <td><?= $comment['author'] ;?></td>
             <td><?= $comment['comment'] ; ?></td>
             <td>
-                <a class="btn btn-danger" href="?page=deleteComment&id=<?= $comment['id']; ?>">Supprimer</a>
+                <a class="btn btn-danger" href="?page=deleteComment&id=<?= $comment['id']; ?>"><i class="fas fa-trash-alt"></i></a>
                 <?php if($comment['report'] == 1) { ?>
-                    <a class="btn btn-primary" href="?page=unReportComment&id=<?= $comment['id']; ?>">Enlever le signalement</a>
+                    <a class="btn btn-primary" href="?page=unReportComment&id=<?= $comment['id']; ?>"><i class="fas fa-bell-slash fa-xs"></i></a>
                 <?php } ?>
             </td>
         </tr>

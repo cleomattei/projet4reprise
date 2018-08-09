@@ -25,11 +25,9 @@ class PostManager extends \CleoMattei\Projet4\Model\Manager
         $db = $this->dbConnect();
         $req = $db->query('SELECT posts.id, posts.title, posts.content, DATE_FORMAT(posts.creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr,
         categories.title AS category_title,
-        count(comments.id) AS count_comments
+        (SELECT count(comments.post_id) FROM comments WHERE comments.post_id = posts.id) AS count_comments
         FROM posts 
         LEFT JOIN categories ON posts.category_id = categories.id
-        INNER JOIN comments ON comments.post_id = posts.id
-        GROUP BY posts.id
         ORDER BY creation_date DESC');
 
         return $req;
@@ -80,15 +78,24 @@ class PostManager extends \CleoMattei\Projet4\Model\Manager
             $lenght = 350;
         }
         $html = '<p>' . substr($post['content'], 0, $lenght) . '...</p>'; //substr = nombre de caractères à afficher
-        $html .= '<p><em><a href="?page=post&id='.$post['id'].'">Voir la suite</a></em></p>';
+
         return $html;
     }
 
-    public function updatePost($postId, $title, $content) // on modifie un post
+    public function updatePost($postId, $title, $content, $category) // on modifie un post
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('UPDATE `posts` SET `title` = ?, `content` = ? WHERE id = ?');
-        $affectedLines = $req->execute(array($title, $content, $postId));
+        $req = $db->prepare('UPDATE `posts` SET `title` = ?, `content` = ?, `category_id` = ? WHERE id = ?');
+        $affectedLines = $req->execute(array($title, $content, $category, $postId));
+
+        return $affectedLines;
+    }
+
+    public function postPost($title, $content, $category) // on insère un commentaire
+    {
+        $db = $this->dbConnect();
+        $comments = $db->prepare('INSERT INTO posts(id, title, content, creation_date, category_id) VALUES(NULL, ?, ?, NOW(), ?)');
+        $affectedLines = $comments->execute(array($title, $content, $category));
 
         return $affectedLines;
     }

@@ -2,22 +2,22 @@
 <?php ob_start(); ?>
 
 
-<section id="allChapters">
-    <h1 class="color-fauve">Tous les Editoriaux</h1>
+<section>
+    <h2 class="color-fauve">Tous les Editoriaux</h2>
     <div class="row justify-content-center">
 
         <?php while ($post = $posts->fetch()){
                 ?>
-        <div id="jumbotronChapters" class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg-white">
             <h2>
                 <a href="index.php?page=post&id=<?=$post['id']?>" class="<?= $post['category_title'];?>">
                     <?= $post['title']; ?>
                 </a>
             </h2>
             <p><em><?= $post['category_id']; ?></em></p>
-            <p>
-                <?= $postManager->getExtrait($post, 200); ?>
-            </p>
+            <p><?=$post['content']; ?> </p>
+            <p><em class="dataPostBlog">le <?=$post['creation_date_fr'] ?></em></p>
+            <button class="btn btn-primary learn-more"><a>Voir les commentaires <i class="fas fa-angle-double-right"></i></a></button>
         </div>
         <?php }?>
     </div>

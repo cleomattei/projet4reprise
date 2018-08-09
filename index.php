@@ -43,8 +43,12 @@ try { // On essaie de faire des choses
             }
         }elseif ($_GET['page'] == 'login'){
            login();
-        }elseif ($_GET['page'] == 'connect'){
+        }
+        elseif ($_GET['page'] == 'connect'){
            connectUser($_POST['username'], $_POST['password']);
+        }
+        elseif ($_GET['page'] == 'contact') {
+           contact();
         }
         
     }

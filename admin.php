@@ -2,7 +2,7 @@
 // On démarre la session AVANT d'écrire du code HTML
 session_start();
 
-if(isset($_SESSION['auth'])) {
+if(!isset($_SESSION['auth'])) {
     header('Location: index.php');
 }
 
@@ -38,6 +38,12 @@ try { // On essaie de faire des choses
             } else {
                 throw new Exception('Aucun identifiant de chapitre envoyé');
             }
+        } else if($_GET['page'] == 'editComment') {
+            if(isset($_GET['id']) && $_GET['id'] > 0) {
+                editComment($_GET['id']);
+            }
+        } else if($_GET['page'] == 'editIntroduction') {
+            editIntroduction() ;
         }
     } else {
         admin();

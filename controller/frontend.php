@@ -2,6 +2,7 @@
 
 // Chargement des classes
 require_once('model/PostManager.php');
+require_once('model/IntroductionManager.php');
 require_once('model/CommentManager.php');
 require_once('model/UserManager.php');
 
@@ -10,6 +11,9 @@ function listPosts()
 {
     $postManager = new  \CleoMattei\Projet4\Model\PostManager(); // Création d'un objet
     $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
+
+    $introductionManager = new  \CleoMattei\Projet4\Model\IntroductionManager(); // Création d'un objet
+    $introduction = $introductionManager->getIntroduction(); // Appel d'une fonction de cet objet
 
     require('view/frontend/listPostsView.php');
 }
@@ -77,5 +81,11 @@ function connectUser($username, $password)
 }
 function home()
 {
+    $introductionManager = new  \CleoMattei\Projet4\Model\IntroductionManager(); // Création d'un objet
+    $introduction = $introductionManager->getIntroduction(); // Appel d'une fonction de cet objet
     require('view/frontend/jeanForteroche.php');
+}
+function contact()
+{
+    require('view/frontend/contact.php');
 }

@@ -3,18 +3,37 @@
 GENERAL
 
 couleur des textes :#BCB08D    _______________________________________________________________________________________________________________________________________________________________________ */
+.pol-shadows{
+    font-family: 'Shadows Into Light', cursive;
+}
+.body {
+    background: url('/public/images/background-alaska.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-family: 'Raleway Thin', sans-serif;
+}
 
-body {
-    background-color:#0D0D0F;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-family: 'Roboto', sans-serif, Thin;
+.bodyBlack {
+    background: rgb(15,57,77); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(15,57,77,1) 10%, rgba(20,89,110,1) 50%, rgba(16,80,102,1) 51%, rgba(27,126,153,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(15,57,77,1) 10%,rgba(20,89,110,1) 50%,rgba(16,80,102,1) 51%,rgba(27,126,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(15,57,77,1) 10%,rgba(20,89,110,1) 50%,rgba(16,80,102,1) 51%,rgba(27,126,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f394d', endColorstr='#1b7e99',GradientType=0 ); /* IE6-9 */
+}
+
+.bg-white{
+    background-color: rgba(255,255,255, 0.8)!important;
+    margin:20px;
+    padding: 20px;
 }
 
 h1 {
     margin-bottom: 40px;
     text-align: center;
     font-size: 60px;
+
 }
 
 p {
@@ -30,9 +49,18 @@ p {
     font-size: 21px!important;
     font-weight: 300!important;
 }
+.learn-more{
+    float: right;
+    color: white;
+    font-size: 12px;
+}
+img{
+    width: 100%;
+}
+
+/* COLOR _______________________________________________________________________________________________________________________________________________________________________*/
 a {
     color: black;
-
 }
 .color-glacier{
     color: #64B5F6;
@@ -42,16 +70,20 @@ a {
     color:   #BCB08D;
 }
 .Roman {
-    color:#64B5F6 !important;
+    color:black !important;
 }
 
 .Editorial {
-    color: #997A44 !important;
+    color: black !important;
 }
 
-.image-intro{
-    margin-bottom: 30px;
+button>a{
+    color: white;
 }
+button>a::hover{
+    color: white;
+}
+/* SPACE _______________________________________________________________________________________________________________________________________________________________________*/
 .space-margin-bot{
     margin-bottom: 30px;
 }
@@ -64,101 +96,31 @@ a {
 .space-padding-bot{
     padding-bottom: 30px;
 }
+
 /* _______________________________________________________________________________________________________________________________________________________________________
 
-BOUTON DE DECONNEXION
+BILLET EN ALASKA
 
     _______________________________________________________________________________________________________________________________________________________________________ */
+#page-title{
+    height: 120px;
+}
+#book-title{
+    margin-top: 50px;
+    color: white;
+    font-size: 40px;
+}
+/* _______________________________________________________________________________________________________________________________________________________________________
 
+NAVBAR
+
+    _______________________________________________________________________________________________________________________________________________________________________ */
+.img-signature{
+    width: 150px;
+    height: auto;
+}
 #bouton-delog {
     margin-left: 10px !important;
-}
-
-/* _______________________________________________________________________________________________________________________________________________________________________
-
-
-SLIDER
-    _______________________________________________________________________________________________________________________________________________________________________ */
-
-/* DIAPORAMA ======================================================================== */
-
-#slider {
-    height: 500px;
-    width: 100%;
-    background-color: #111111;
-    position: relative;
-    margin: auto;
-    margin-bottom: 150px;
-}
-
-.fa-arrow-alt-circle-left {
-    position: absolute;
-    top: 310px;
-    left: 10px;
-    z-index: 1000;
-    color: white;
-    background-color: black;
-    font-size: 1.5rem;
-    margin-top: -12px;
-}
-
-.fa-arrow-alt-circle-right {
-    position: absolute;
-    top: 310px;
-    right: 10px;
-    z-index: 1000;
-    color: white;
-    background-color: black;
-    font-size: 1.5rem;
-    margin-top: -12px;
-}
-
-#parent_figure {
-    height: 700px;
-    width: 100%;
-    margin: auto;
-    overflow: hidden !important;
-
-}
-
-#list_figure {
-    height: 500px;
-    width: 100%;
-    float: left;
-    background-color: white;
-
-}
-
-#list_figure > figure {
-    position: relative;
-}
-
-figcaption {
-    position: absolute;
-    bottom: 50px;
-    background:rgba(255,255,255,0.5);
-    padding: 10px;
-
-}
-figcaption>p{
-    font-size: 30px;
-}
-
-figure > img {
-    width: 100%;
-    height: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-
-/* _______________________________________________________________________________________________________________________________________________________________________
-
-PAGE JEAN FORTEROCHE PRESENTATION
-
-    _______________________________________________________________________________________________________________________________________________________________________ */
-
-img {
-    width: 100%;
 }
 
 
@@ -167,52 +129,30 @@ img {
 
 PAGE = BLOG
     _______________________________________________________________________________________________________________________________________________________________________ */
-
-.jumbotronBlog {
-    background-color:#E3F2FD;
-}
-
-#blog > h2 {
-    text-align: center;
-    color: #0070FF;
-}
-
-.jumbotronPostBlog {
-    background-color: #FAFAFA;
-    padding: 20px;
-    margin: 20px;
-    border: double 4px black;
+#img-portrait{
+    margin-top: 15px;
 }
 
 .dataPostBlog {
     border-top: solid 1px black;
 }
+/*bloc last billets*/
+.title-blog {
 
-/* _______________________________________________________________________________________________________________________________________________________________________
-
-
-PAGE = TOUS LES CHAPITRES
-    _______________________________________________________________________________________________________________________________________________________________________ */
-
-#allChapters {
-    background-color:#E3F2FD;
-    padding: 20px;
+    padding-left: 20px;
 
 }
-
-#jumbotronChapters > h2 {
-    text-align: center;
-
+.title-blog>div>h2{
+    margin-top: 15px;
+    color: #BCB08D!important;
 }
-
-#jumbotronChapters > h2 > a {
-    color: #64B5F6;
+.title-blog>div>ul{
+    margin-top: 10px;
+    color: #BCB08D!important;
 }
-
-#jumbotronChapters {
-    border: double 4px black;
-    margin: 20px;
-    background-color: #FAFAFA;
+.title-blog>div>ul>li>a{
+    margin-top: 10px;
+    color: #BCB08D!important;
 }
 /* _______________________________________________________________________________________________________________________________________________________________________
 
@@ -225,14 +165,23 @@ PAGE ALONE
     padding: 20px;
 
 }
-
+.dataPostBlogView{
+    border-top: solid 2px  #BCB08D;
+}
+.img-Chapter{
+    width: 100%;
+}
 /* _______________________________________________________________________________________________________________________________________________________________________
 
-
-COMMENT VIEW
+FOOTER
     _______________________________________________________________________________________________________________________________________________________________________ */
-.jumbotronComment{
-    border: double 4px black;
-    margin: 20px;
-    background-color: #BDBDBD;
+.social-icon{
+    color: white;
+    border-top: solid 2px white;
+    padding-top: 50px;
+    letter-spacing: 20px;
+}
+.footer-copyright, .footer-copyright>a
+{
+    color: white;
 }

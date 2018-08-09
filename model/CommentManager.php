@@ -12,7 +12,7 @@ class CommentManager extends \CleoMattei\Projet4\Model\Manager
     public function getAllComments() // on récupère TOUS les commentaires
     {
         $db = $this->dbConnect();
-        $comments = $db->query('SELECT id, author, comment, report, post_id, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments ORDER BY comment_date DESC');
+        $comments = $db->query('SELECT id, author, comment, report, post_id, lu, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments ORDER BY comment_date DESC');
 
         return $comments;
     }
@@ -20,7 +20,7 @@ class CommentManager extends \CleoMattei\Projet4\Model\Manager
     public function getComments($postId) // on récupère les commentaires d'UN post 
     {
         $db = $this->dbConnect();
-        $comments = $db->prepare('SELECT id, author, comment, report, post_id, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY comment_date DESC');
+        $comments = $db->prepare('SELECT id, author, comment, report, post_id, lu, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY comment_date DESC');
         $comments->execute(array($postId));
 
         return $comments;
@@ -29,7 +29,7 @@ class CommentManager extends \CleoMattei\Projet4\Model\Manager
     public function getOneComment($commentId) // on récupère les commentaires d'UN post
     {
         $db = $this->dbConnect();
-        $comments = $db->prepare('SELECT id, author, comment, report, post_id, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE id = ? ORDER BY comment_date DESC');
+        $comments = $db->prepare('SELECT id, author, comment, report, post_id, lu, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE id = ? ORDER BY comment_date DESC');
         $comments->execute(array($commentId));
         $comments = $comments->fetch();
 
@@ -41,6 +41,15 @@ class CommentManager extends \CleoMattei\Projet4\Model\Manager
         $db = $this->dbConnect();
         $comments = $db->prepare('INSERT INTO comments(post_id, author, comment, comment_date) VALUES(?, ?, ?, NOW())');
         $affectedLines = $comments->execute(array($postId, $author, $comment));
+
+        return $affectedLines;
+    }
+
+    public function reportOneComment($commentId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE `comments` SET `report` = 1 WHERE id = ?');
+        $affectedLines = $req->execute(array($commentId));
 
         return $affectedLines;
     }
@@ -71,5 +80,12 @@ class CommentManager extends \CleoMattei\Projet4\Model\Manager
 
         return $affectedLines;
     }
-
+	
+	public function readAllComment($commentId)
+	{
+		$db = $this->dbConnect();
+		$req = $db->query('UPDATE `comments` SET `read` = 1');
+		
+		return $req;
+	}
 }

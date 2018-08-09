@@ -8,7 +8,7 @@
     <h2 class="color-fauve title-blog">Contact</h2>
 
             <form class="bg-white">
-                <div class="col-md-6 form-line">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-line">
                     <div class="form-group">
 
                         <input type="text" class="form-control" id="name-contact" placeholder=" Nom">
@@ -19,7 +19,7 @@
                     </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group">
 
                         <textarea  class="form-control" id="description" placeholder=" Message"></textarea>
@@ -38,4 +38,4 @@
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+<?php require('../template/template.php'); ?>

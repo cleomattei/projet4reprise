@@ -172,5 +172,5 @@
     <script src="/oc/projet4/public/js/tinymce/tinymce.min.js"></script>
 
 </body>
- 
+
 </html>

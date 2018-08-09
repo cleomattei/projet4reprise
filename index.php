@@ -41,7 +41,17 @@ try { // On essaie de faire des choses
                 // Autre exception
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
-        }elseif ($_GET['page'] == 'login'){
+        }
+        elseif ($_GET['page'] == 'reportComment') {
+	        if (isset($_GET['id']) && $_GET['id'] > 0) {
+		        reportComment($_GET['id']);
+	        }
+	        else {
+		        // Autre exception
+		        throw new Exception('Aucun identifiant de commentaire envoyé');
+	        }
+        }
+        elseif ($_GET['page'] == 'login'){
            login();
         }
         elseif ($_GET['page'] == 'connect'){

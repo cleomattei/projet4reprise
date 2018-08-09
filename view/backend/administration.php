@@ -57,6 +57,7 @@
 
             <th scope="col">Auteur</th>
             <th scope="col">Commentaire</th>
+            <th scope="col">Lus</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -64,8 +65,9 @@
         <?php while ($comment = $comments->fetch()){ ?>
             <tr >
 
-                <td><?= $comment['author'] ;?></td>
+                <td><?= $comment['author'] ; ?></td>
                 <td><?= $comment['comment'] ; ?></td>
+                <td><?php if($comment['lu'] == '1') echo "Oui" ; else echo "Non" ; ?></td>
                 <td class="trash-border">
                     <a class="btn btn-danger" href="?page=editComment&id=<?= $comment['post_id']; ?>"><i class="fas fa-trash-alt"></i></a>
                     <?php if($comment['report'] == 1) { ?>
@@ -79,4 +81,4 @@
     </section>
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+<?php require('../template/template.php'); ?>

@@ -5,7 +5,7 @@
 <?= $message ; ?>
 <form method="post">
     <div class="form-group">
-        <input type="text" id="title" class="form-control" name="title""/>
+        <input type="text" id="title" class="form-control" name="title" placeholder="Titre"/>
     </div>
     <div class="form-group">
         <textarea id="content" class="form-control" name="content"></textarea>
@@ -18,10 +18,10 @@
         </select>
     </div>
     <div>
-        <input type="submit" class="btn btn-primary"/>
+        <input type="submit" class="btn btn-primary" value="Valider" />
     </div>
 </form>
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+<?php require('../template/template.php'); ?>

@@ -60,6 +60,19 @@ function addComment($postId, $author, $comment)
     }
 }
 
+function reportComment($commentId)
+{
+	$commentManager = new \CleoMattei\Projet4\Model\CommentManager();
+	$affectedLines = $commentManager->reportOneComment($commentId);
+	
+	if ($affectedLines === false) {
+		throw new Exception('Impossible de signaler le commentaire !');
+	}
+	else {
+		header('Location: index.php');
+	}
+}
+
 function login()
 {
     require('view/frontend/login.php');

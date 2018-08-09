@@ -14,9 +14,7 @@
     </div>
 <?php } else { ?>
     <h1 class="color-fauve"><?= htmlspecialchars($post['title']) ?></h1>
-
-
-
+    
     <div class="row justify-content-center <?php if($post['category_title'] == 'Editorial') echo 'bg-white' ; ?>">
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 ">
 
@@ -56,7 +54,7 @@
 
             <p><strong><?=($comment['author']) ?></strong></p>
             <?= nl2br(($comment['comment'])) ?>
-            <a class="btn btn-danger learn-more"><i class="fas fa-flag"></i></a>
+            <a href="index.php?page=reportComment&id=<?= $comment['id'];?>" class="btn btn-danger learn-more"><i class="fas fa-flag"></i></a>
             <p><em class="dataPostBlog"> le <?= $comment['comment_date_fr'] ?></em></p>
 
 
@@ -67,4 +65,4 @@
 </section>
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+<?php require('../template/template.php'); ?>

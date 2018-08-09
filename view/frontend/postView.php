@@ -52,11 +52,10 @@
         ?>
         <div class="bg-white">
 
-            <p><strong><?=($comment['author']) ?></strong></p>
+            <p><strong><?=htmlspecialchars($comment['author']) ?></strong></p>
             <?= nl2br(($comment['comment'])) ?>
             <a href="index.php?page=reportComment&id=<?= $comment['id'];?>" class="btn btn-danger learn-more"><i class="fas fa-flag"></i></a>
             <p><em class="dataPostBlog"> le <?= $comment['comment_date_fr'] ?></em></p>
-
 
         </div>
         <?php
@@ -65,4 +64,4 @@
 </section>
 <?php $content = ob_get_clean(); ?>
 
-<?php require('../template/template.php'); ?>
+<?php require('template.php'); ?>

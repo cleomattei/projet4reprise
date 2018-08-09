@@ -69,7 +69,7 @@ function reportComment($commentId)
 		throw new Exception('Impossible de signaler le commentaire !');
 	}
 	else {
-		header('Location: index.php');
+        require('view/frontend/reportComment.php');
 	}
 }
 

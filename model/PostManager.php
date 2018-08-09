@@ -77,7 +77,7 @@ class PostManager extends \CleoMattei\Projet4\Model\Manager
         if($lenght === NULL){
             $lenght = 350;
         }
-        $html = '<p>' . substr($post['content'], 0, $lenght) . '...</p>'; //substr = nombre de caractères à afficher
+        $html = substr($post['content'], 0, $lenght) . '...'; //substr = nombre de caractères à afficher
 
         return $html;
     }

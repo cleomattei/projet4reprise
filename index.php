@@ -50,6 +50,9 @@ try { // On essaie de faire des choses
         elseif ($_GET['page'] == 'contact') {
            contact();
         }
+        else {
+            throw new Exception('Page introuvable !');
+        }
         
     }
     else {

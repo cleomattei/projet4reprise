@@ -7,7 +7,7 @@ couleur des textes :#BCB08D    _________________________________________________
     font-family: 'Shadows Into Light', cursive;
 }
 .body {
-    background: url('/public/images/background-alaska.png') no-repeat center center fixed;
+    background: url('/oc/projet4/public/images/background-alaska.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -50,6 +50,11 @@ p {
     font-weight: 300!important;
 }
 .learn-more{
+    float: right;
+    color: white;
+    font-size: 12px;
+}
+.learn-comments{
     float: right;
     color: white;
     font-size: 12px;
@@ -170,6 +175,23 @@ PAGE ALONE
 }
 .img-Chapter{
     width: 100%;
+}
+/* _______________________________________________________________________________________________________________________________________________________________________
+
+PAGE ERROR
+    _______________________________________________________________________________________________________________________________________________________________________ */
+figure{
+    position: relative;
+}
+figcaption{
+    position: absolute;
+    top: 60%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255, 0.8)!important;
+    color: #BCB08D;
+    font-size: 40px;
+    text-align: center;
 }
 /* _______________________________________________________________________________________________________________________________________________________________________
 

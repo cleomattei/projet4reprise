@@ -1,7 +1,7 @@
 <?php $title = 'Mon blog'; ?>
 <?php ob_start(); ?>
 <?php if($post['category_title'] == 'Roman') { ?>
-    <img class="img-Chapter space-margin-bot" src="../../public/images/wolf.jpg" alt="photo d'un loup brun couché sur un rocher"/>
+    <img class="img-Chapter space-margin-bot" src="/oc/projet4/public/images/wolf.jpg" alt="photo d'un loup brun couché sur un rocher"/>
 <?php } ?>
 
 <?php if($post['category_title'] == 'Editorial') { ?>
@@ -55,8 +55,8 @@
         <div class="bg-white">
 
             <p><strong><?=($comment['author']) ?></strong></p>
-            <p><?= nl2br(($comment['comment'])) ?></p>
-            <a><button class="btn btn-danger learn-more"><i class="fas fa-flag"></i></button></a>
+            <?= nl2br(($comment['comment'])) ?>
+            <a class="btn btn-danger learn-more"><i class="fas fa-flag"></i></a>
             <p><em class="dataPostBlog"> le <?= $comment['comment_date_fr'] ?></em></p>
 
 

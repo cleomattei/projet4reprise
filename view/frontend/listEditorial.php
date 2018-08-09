@@ -15,9 +15,11 @@
                 </a>
             </h2>
             <p><em><?= $post['category_id']; ?></em></p>
-            <p><?=$post['content']; ?> </p>
+            <?=$post['content']; ?>
+
             <p><em class="dataPostBlog">le <?=$post['creation_date_fr'] ?></em></p>
-            <button class="btn btn-primary learn-more"><a>Voir les commentaires <i class="fas fa-angle-double-right"></i></a></button>
+            <a href="index.php?page=post&id=<?=$post['id'];?>" class="btn btn-primary learn-more">Voir les commentaires <i class="fas fa-angle-double-right"></i></a>
+
         </div>
         <?php }?>
     </div>

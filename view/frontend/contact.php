@@ -3,14 +3,15 @@
 <?php ob_start(); ?>
 
 <?= $message ; ?>
-<section id="contact" class="bg-white">
 
+<section id="contact" >
+    <h2 class="color-fauve title-blog">Contact</h2>
 
-            <form>
+            <form class="bg-white">
                 <div class="col-md-6 form-line">
                     <div class="form-group">
 
-                        <input type="text" class="form-control" id="" placeholder=" Nom">
+                        <input type="text" class="form-control" id="name-contact" placeholder=" Nom">
                     </div>
                     <div class="form-group">
 

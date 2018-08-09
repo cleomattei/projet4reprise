@@ -71,7 +71,7 @@ function SnowStorm() {
     // PROPERTIES
     // ------------------
 
-    var imagePath = '/public/images/snow/'; // relative path to snow images (including trailing slash)
+    var imagePath = '/oc/projet4/public/images/snow/'; // relative path to snow images (including trailing slash)
     var flakesMax = 128;
     var flakesMaxActive = 64;
     var vMaxX = 8;

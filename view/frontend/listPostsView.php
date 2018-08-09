@@ -1,4 +1,4 @@
-<?php $title = 'Mon blog'; ?>
+<?php $title = 'Blog'; ?>
 
 <?php ob_start(); ?>
 
@@ -6,13 +6,13 @@
     <div class="row">
 
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <img id="img-portrait"alt="portrait de jean forteroche" src="/public/images/portrait_jean_forteroche.jpg" />
+                <img id="img-portrait" alt="portrait de jean forteroche" src="/oc/projet4/public/images/portrait_jean_forteroche.jpg" />
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 <h2><?= $introduction['title'] ; ?></h2>
                 <?=$introductionManager->getExtrait($introduction, 500) ; ?>
 
-                <a href="index.php?page=jeanForteroche"><button class="btn btn-primary learn-more">Découvrir l'auteur <i class="fas fa-angle-double-right"></i></button></a>
+                <a href="index.php?page=jeanForteroche" class="btn btn-primary learn-more">Découvrir l'auteur <i class="fas fa-angle-double-right"></i></a>
             </div>
 
     </div>
@@ -40,7 +40,7 @@
             while ($data = $posts->fetch())
             {
                 ?>
-                <div class="bg-white">
+                <div class="bg-white min-height-smartphone">
 
                     <h3 class="<?= $data['category_title'];?>">
                         <i class="fab fa-first-order"></i>
@@ -48,9 +48,10 @@
 
                     </h3>
 
-                    <p><?= nl2br(($postManager->getExtrait($data,300))) ?> </p>
+                    <div><?= nl2br(($postManager->getExtrait($data,300))) ?></div>
                     <em class="dataPostBlog">le <?= $data['creation_date_fr'] ?></em>
-                    <a href="?page=post&id=<?=$data['id']?>"><button class="btn btn-primary learn-more">Lire la suite <i class="fas fa-angle-double-right"></i></button></a>
+                    <p><a href="?page=post&id=<?=$data['id']?>" class="btn btn-primary learn-more">Lire la suite <i class="fas fa-angle-double-right"></i></a></p>
+
                 </div>
 
                 <?php

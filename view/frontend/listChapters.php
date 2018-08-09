@@ -14,9 +14,9 @@
                 </a>
             </h2>
             <p><em><?= $post['category_id']; ?></em></p>
-            <p><?= $postManager->getExtrait($post, 800); ?> </p>
+            <div><?= $postManager->getExtrait($post, 800); ?> </div>
             <p><em class="dataPostBlog">le <?=$post['creation_date_fr'];?></em></p>
-            <a href="index.php?page=post&id=<?=$post['id'];?>"><button class="btn btn-primary learn-more">Lire la suite</button></a>
+            <a href="index.php?page=post&id=<?=$post['id'];?>" class="btn btn-primary learn-more">Lire la suite</a>
 
         </div>
         <?php }?>

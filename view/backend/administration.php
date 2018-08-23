@@ -39,7 +39,7 @@
 
                     <td><?= $post['title'] ;?></td>
                     <td><?= $post['count_comments'] ; ?></td>
-                    <td class="row text-right">
+                    <td class="text-right">
                         <a class="btn btn-primary" href="?page=editChapter&id=<?= $post['id']; ?>"><i class="fas fa-pencil-alt"></i></a>
                         <a class="button-right-space btn btn-danger" href="?page=deleteChapter&id=<?= $post['id']; ?>"><i class="fas fa-trash-alt"></i></a>
                     </td>
@@ -60,7 +60,7 @@
             </tr>
             </thead>
             <tbody>
-            <?php while ($comment = $comments->fetch()){ ?> 
+            <?php while ($comment = $comments->fetch()){ ?>
                 <tr>
 
                     <td><?= $comment['author'] ; ?></td>

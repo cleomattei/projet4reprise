@@ -16,7 +16,7 @@
     <h1 class="color-fauve"><?= htmlspecialchars($post['title']) ?></h1>
     
     <div class="row justify-content-center <?php if($post['category_title'] == 'Editorial') echo 'bg-white' ; ?>">
-        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 ">
+        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 bg-white">
 
             <div class="type-roman">
                 <?= nl2br(($post['content'])) ?>

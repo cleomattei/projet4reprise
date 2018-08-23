@@ -25,7 +25,7 @@
 
 </head>
 
-<body class="body<?php if($_GET['page'] == 'post') echo 'Black' ;?>">
+<body class="body">
 
 <section id="page-title">
     <h1 id="book-title" class="pol-shadows">

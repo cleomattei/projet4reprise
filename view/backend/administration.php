@@ -3,7 +3,7 @@
 
 
     <section id="administration" class="bg-white">
-        <h1>Administration</h1>
+        <h1>Admin</h1>
         <h2>Introduction</h2>
         <table class="table table-striped table-hover">
             <thead class="thead-dark">
@@ -24,7 +24,7 @@
         <h2>Chapitres</h2>
         <a href="?page=addChapter"><button class="btn btn-success space-margin-bot">Ajouter</button></a>
         
-        <table class="table table-striped table-hover table-responsive table-chapters">
+        <table class="table table-striped table-hover table-responsive table-admin">
             <thead class="thead-dark">
             <tr>
 
@@ -39,9 +39,9 @@
 
                     <td><?= $post['title'] ;?></td>
                     <td><?= $post['count_comments'] ; ?></td>
-                    <td class="text-right">
-                        <a class="btn btn-primary" href="?page=editChapter&id=<?= $post['id']; ?>"><i class="fas fa-pencil-alt fa-lg"></i></a>
-                        <a class="btn btn-danger" href="?page=deleteChapter&id=<?= $post['id']; ?>"><i class="fas fa-trash-alt fa-lg"></i></a>
+                    <td class="row text-right">
+                        <a class="btn btn-primary" href="?page=editChapter&id=<?= $post['id']; ?>"><i class="fas fa-pencil-alt"></i></a>
+                        <a class="button-right-space btn btn-danger" href="?page=deleteChapter&id=<?= $post['id']; ?>"><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
             <?php } ?>
@@ -68,7 +68,7 @@
                     <td class="row text-right">
                         <a class="btn btn-danger" href="?page=editComment&id=<?= $comment['post_id']; ?>"><i class="fas fa-trash-alt"></i></a>
                         <?php if($comment['report'] == 1) { ?>
-                            <a class="btn btn-primary" href="?page=editComment&id=<?= $comment['post_id']; ?>"><i class="fas fa-bell-slash fa-xs"></i></a>
+                            <a class="button-right-space btn btn-primary" href="?page=editComment&id=<?= $comment['post_id']; ?>"><i class="fas fa-bell-slash fa-xs"></i></a>
                         <?php } ?>
                     </td>
                 </tr>

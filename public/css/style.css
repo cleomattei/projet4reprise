@@ -17,13 +17,6 @@ couleur des textes :#BCB08D    _________________________________________________
     min-height:80vh;
 }
 
-.bodyBlack {
-    background: rgb(15,57,77); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(15,57,77,1) 10%, rgba(20,89,110,1) 50%, rgba(16,80,102,1) 51%, rgba(27,126,153,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(15,57,77,1) 10%,rgba(20,89,110,1) 50%,rgba(16,80,102,1) 51%,rgba(27,126,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(15,57,77,1) 10%,rgba(20,89,110,1) 50%,rgba(16,80,102,1) 51%,rgba(27,126,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f394d', endColorstr='#1b7e99',GradientType=0 ); /* IE6-9 */
-}
 
 .bg-white{
     background-color: rgba(255,255,255, 0.8)!important;
@@ -90,7 +83,7 @@ a {
 button>a{
     color: white;
 }
-button>a::hover{
+button>a:hover{
     color: white;
 }
 /* SPACE _______________________________________________________________________________________________________________________________________________________________________*/
@@ -129,8 +122,8 @@ NAVBAR
     width: 150px;
     height: auto;
 }
-#bouton-delog {
-    margin-left: 10px !important;
+.button-space {
+    margin-right: 5px !important;
 }
 
 
@@ -208,6 +201,9 @@ FOOTER
     padding-top: 50px;
     letter-spacing: 20px;
 }
+.social-icon>a>i:hover{
+   color: #BCB08D;
+}
 .footer-copyright, .footer-copyright>a
 {
     color: white;
@@ -236,9 +232,15 @@ PAGE ADMIN
 td>p{
     width: 70%;
 }
-.table-chapters{
-    display:table!important;
+.button-right-space{
+    margin-left: 3px;
 }
 .fas .fa-bell-slash{
     margin-left: 3px;
+}
+@media screen and (min-device-width: 768px){
+    table {
+        display: inline-table!important;
+    }
+
 }

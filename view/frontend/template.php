@@ -9,9 +9,9 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Blog de Jean Forteroche</title>
-    
+
     <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Feuille de style CSS -->
     <link rel="stylesheet" href="/oc/projet4/public/css/style.css">
     <!-- appel la police d'écriture -->
@@ -33,62 +33,62 @@
     </h1>
 </section>
 <!-- __________________________________________________________________________________________________________________________________________________________________ -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light ">
-        <a class="navbar-brand" href="index.php?page=jeanForteroche"><img class="img-signature" alt="signature caligraphiée de jean Forteroche" src="/oc/projet4/public/images/signature_jean_forteroche_transparent.png"/></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md navbar-light bg-light ">
+    <a class="navbar-brand" href="index.php?page=jeanForteroche"><img class="img-signature" alt="signature caligraphiée de jean Forteroche" src="/oc/projet4/public/images/signature_jean_forteroche_transparent.png"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Blog <span class="sr-only">(current)</span></a>
-                </li>
-                <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Tous les chapitres</a>
-          </li>-->
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">Blog <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Tous les chapitres</a>
+      </li>-->
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="index.php?page=listChapters">Tous les chapitres</a>
-                    
-                </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="index.php?page=listChapters">Tous les chapitres</a>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="index.php?page=contact">Contact</a>
+            </li>
 
-                </li>
-            </ul>
-            
-            <?php if(isset($_SESSION['auth'])){ ?>
-           
-             <form action="admin.php" method="post" class="form-inline my-2 my-lg-0">
-                
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="index.php?page=contact">Contact</a>
+
+            </li>
+        </ul>
+
+        <?php if(isset($_SESSION['auth'])){ ?>
+
+            <form action="admin.php" method="post" class="form-inline my-2 my-lg-0">
+
                 <button class="btn btn-primary my-2 my-sm-0" type="submit" ><i class="fas fa-user-cog"></i></button><!-- administration -->
             </form>
-            
-            
-             <form action="admin.php?page=logout" method="post" class="form-inline my-2 my-lg-0">
-                
+
+
+            <form action="admin.php?page=logout" method="post" class="form-inline my-2 my-lg-0">
+
                 <button id="bouton-delog" class="btn btn-danger my-2 my-sm-0" type="submit" ><i class="fas fa-user-slash"></i></button><!-- se deconnecter -->
             </form>
             <?php
-            }else{
+        }else{
 
             ?>
             <form action="?page=login" method="post" class="form-inline my-2 my-lg-0">
                 <button class="btn btn-dark my-2 my-sm-0" type="submit" ><i class="fas fa-user-circle"></i></button><!-- se connecter -->
             </form>
-  <?php }  ?>
-        </div>
-    </nav>
+        <?php }  ?>
+    </div>
+</nav>
 <!-- __________________________________________________________________________________________________________________________________________________________________ -->
 
-    <main class="container">
-        <div class="starter-template" style="padding-top: 100px">
-            <?= $content; ?>
-        </div>
+<main class="container">
+    <div class="starter-template" style="padding-top: 100px">
+        <?= $content; ?>
+    </div>
 
-    </main>
+</main>
 
 <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
@@ -142,31 +142,32 @@
 </footer>
 <!-- Footer -->
 <!-- __________________________________________________________________________________________________________________________________________________________________ -->
-    <!-- /.container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+<!-- /.container -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
 
-    </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+
+</script>
 <script src="/oc/projet4/public/js/snow.js"></script>
-    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
-    
-    <!-- CDN TINYMCE -->
-    <script src="/oc/projet4/public/js/tinymce/tinymce.min.js"></script>
-    <script>
+<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<!-- CDN TINYMCE -->
+<script src="/oc/projet4/public/js/tinymce/tinymce.min.js"></script>
+<script>
     tinymce.init({
         selector: 'textarea',
         language: 'fr_FR'
     });
-    </script>
-    <!-- Appel javascript min -->
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    
-     <script src="/oc/projet4/public/js/diaporama.js"></script>
+</script>
+<!-- Appel javascript min -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 
 </body>
 

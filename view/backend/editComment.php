@@ -10,10 +10,10 @@
 
 
 <div class="row bg-white">
-<table class="table">
+<table class="table table-striped table-hover table-responsive table-admin">
     <h2>Commentaires associés</h2>
-    <thead>
-    <tr >
+    <thead class="thead-dark">
+    <tr>
         <th scope="col">#</th>
         <th scope="col">Auteur</th>
         <th scope="col">Commentaire</th>

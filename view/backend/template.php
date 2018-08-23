@@ -14,6 +14,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Feuille de style CSS -->
     <link rel="stylesheet" href="/oc/projet4/public/css/style.css">
+
     <!-- appel la police d'écriture -->
     <link href="https://fonts.googleapis.com/css?family=Modern+AntiquaRaleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
@@ -60,13 +61,13 @@
            
              <form action="admin.php" method="post" class="form-inline my-2 my-lg-0">
                 
-                <button class="btn btn-primary my-2 my-sm-0" type="submit" ><i class="fas fa-user-cog"></i></button><!-- administration -->
+                <button class="button-space btn btn-primary my-2 my-sm-0" type="submit" ><i class="fas fa-user-cog"></i></button><!-- administration -->
             </form>
             
             
              <form action="admin.php?page=logout" method="post" class="form-inline my-2 my-lg-0">
                 
-                <button id="bouton-delog" class="btn btn-danger my-2 my-sm-0" type="submit" ><i class="fas fa-user-slash"></i></button><!-- se deconnecter -->
+                <button class="btn btn-danger my-2 my-sm-0" type="submit" ><i class="fas fa-user-slash"></i></button><!-- se deconnecter -->
             </form>
             <?php
             }else{

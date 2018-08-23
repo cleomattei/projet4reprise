@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06124fc5-b135-4d03-a7c7-40bb3f72e690" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/backend/administration.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/administration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/backend/editComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/editComment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/backend/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/frontend/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +49,7 @@
           <entry key="css" value="2499" />
           <entry key="gitignore" value="7" />
           <entry key="js" value="50" />
-          <entry key="php" value="9347" />
+          <entry key="php" value="9348" />
           <entry key="txt" value="191" />
         </counts>
       </usages-collector>
@@ -61,7 +57,7 @@
         <counts>
           <entry key="CSS" value="2499" />
           <entry key="JavaScript" value="50" />
-          <entry key="PHP" value="9341" />
+          <entry key="PHP" value="9342" />
           <entry key="PLAIN_TEXT" value="198" />
           <entry key="SQL" value="6" />
         </counts>
@@ -100,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/backend/administration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="43" column="145" selection-start-line="43" selection-start-column="145" selection-end-line="43" selection-end-column="145" />
+            <state relative-caret-position="622">
+              <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -334,7 +330,7 @@
       <workItem from="1533760413895" duration="46827000" />
       <workItem from="1534111205348" duration="251000" />
       <workItem from="1534111499327" duration="875000" />
-      <workItem from="1534945483704" duration="10345000" />
+      <workItem from="1534945483704" duration="10420000" />
     </task>
     <task id="LOCAL-00001" summary="travail sur le css">
       <created>1533790476561</created>
@@ -392,11 +388,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535022770269</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="finalisation projet">
+      <created>1535029526457</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1535029526457</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78035000" />
+    <option name="totallyTimeSpent" value="78110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1006" extended-state="6" />
@@ -697,8 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/backend/administration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="43" column="145" selection-start-line="43" selection-start-column="145" selection-end-line="43" selection-end-column="145" />
+        <state relative-caret-position="622">
+          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
         </state>
       </provider>
     </entry>

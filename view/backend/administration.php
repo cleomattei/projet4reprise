@@ -60,7 +60,7 @@
             </tr>
             </thead>
             <tbody>
-            <?php while ($comment = $comments->fetch()){ ?>
+            <?php while ($comment = $comments->fetch()){ ?> 
                 <tr>
 
                     <td><?= $comment['author'] ; ?></td>

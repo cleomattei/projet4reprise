@@ -1,4 +1,3 @@
-<?php $title = 'Administration'; ?>
 <?php ob_start(); ?>
 <?= $message ; ?>
     <p class="color-fauve"> Êtes-vous sûr de vouloir supprimer le commentaire de <?= $comment['author'] ; ?> ?</p>

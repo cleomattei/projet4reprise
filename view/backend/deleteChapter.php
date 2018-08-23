@@ -1,4 +1,3 @@
-<?php $title = 'Administration'; ?>
 <?php ob_start(); ?>
 <?= $message ; ?>
 <div class="bg-white">

@@ -1,4 +1,3 @@
-<?php $title = 'Mon blog'; ?>
 <?php ob_start(); ?>
 
 <div class="row bg-white space-padding-top">

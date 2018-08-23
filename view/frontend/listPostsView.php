@@ -1,5 +1,3 @@
-<?php $title = 'Blog'; ?>
-
 <?php ob_start(); ?>
 
 <section id="blog" class="bg-white">

@@ -4,7 +4,7 @@ session_start();
 
 require('controller/frontend.php');
 
-try { // On essaie de faire des choses
+try {
     if (isset($_GET['page'])) {
         if ($_GET['page'] == 'listPosts') {
             listPosts();

@@ -1,4 +1,3 @@
-<?php $title = 'Mon blog'; ?>
 <?php ob_start(); ?>
     <figure>
         <img src="/oc/projet4/public/images/iceberg_titanic.jpg" alt="dessin humoristique d'un iceberg détruisant le titanic"/>

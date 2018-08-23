@@ -1,6 +1,4 @@
-<?php $title = 'Administration'; ?>
 <?php ob_start(); ?>
-
 
     <section id="administration" class="bg-white">
         <h1>Admin</h1>

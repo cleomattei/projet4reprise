@@ -1,5 +1,3 @@
-
-<?php $title = 'Edition de l\'introduction'; ?>
 <?php ob_start(); ?>
 
 <?= $message ; ?>

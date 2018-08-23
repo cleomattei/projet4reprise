@@ -1,5 +1,3 @@
-
-<?php $title = 'Edition d\'un chapitre'; ?>
 <?php ob_start(); ?>
 
 <?= $message ; ?>

@@ -14,8 +14,6 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Feuille de style CSS -->
     <link rel="stylesheet" href="/oc/projet4/public/css/style.css">
-    <link href="/oc/projet4/public/css/tablette.css" rel="stylesheet">
-    <link href="/oc/projet4/public/css/smartphone.css" rel="stylesheet" media="screen and (max-width: 768px)">
     <!-- appel la police d'écriture -->
     <link href="https://fonts.googleapis.com/css?family=Modern+AntiquaRaleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
@@ -46,9 +44,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Blog <span class="sr-only">(current)</span></a>
                 </li>
-                <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Tous les chapitres</a>
-          </li>-->
 
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="index.php?page=listChapters">Tous les chapitres</a>
@@ -99,7 +94,7 @@
     <div class="container">
 
         <!-- Grid row-->
-        <div class="row">
+        <div class="row justify-content-center">
 
             <!-- Grid column -->
             <div class="col-md-12 py-5">
@@ -133,7 +128,7 @@
         <!-- Grid row-->
 
     </div>
-    <!-- Footer Elements -->
+
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2018 Copyright :

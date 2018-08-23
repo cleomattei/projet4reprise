@@ -108,9 +108,9 @@ function unReportComment($id)
     $result = $commentManager->unReportOneComment($_GET['id']) ;
 
     if($result) {
-        header('Location: admin.php');
+	    require('view/backend/unReportComment.php');
     } else {
-        $message = "<div class='alert alert-danger'>Une erreur s'est produite !</div>" ;
+	    require('view/frontend/errorView.php');
     }
 }
 
@@ -127,8 +127,8 @@ function addChapter() {
             $message = "<div class='alert alert-danger'>Une erreur s'est produite !</div>" ;
         }
     }
-
-    require('view/backend/addChapter.php');
+	
+	require('view/backend/addChapter.php');
 }
 
 function editIntroduction() {

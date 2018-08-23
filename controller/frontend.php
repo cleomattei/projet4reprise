@@ -50,13 +50,13 @@ function addComment($postId, $author, $comment)
 {
     $commentManager = new \CleoMattei\Projet4\Model\CommentManager();
 
-    $affectedLines = $commentManager->postComment($postId, $author, $comment);
+    $affectedLines = $commentManager->postComment($postId, htmlspecialchars($author), $comment);
 
     if ($affectedLines === false) {
         throw new Exception('Impossible d\'ajouter le commentaire !');
     }
     else {
-        header('Location: index.php?action=post&id=' . $postId);
+        header('Location: index.php?page=post&id=' . $postId . "#comment");
     }
 }
 

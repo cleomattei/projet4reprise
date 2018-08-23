@@ -2,7 +2,7 @@
 <?php $title = 'Mon blog'; ?>
 <?php ob_start(); ?>
 
-<?= $message ; ?>
+<div id="error-message-login"> <?= $message ; ?></div>
 <form action="index.php?page=connect" method="post">
     <div class="form-group">
 

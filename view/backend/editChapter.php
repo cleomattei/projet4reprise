@@ -1,6 +1,8 @@
 <?php ob_start(); ?>
 
 <?= $message ; ?>
+<div class="row bg-white">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <form method="post">
     <div class="form-group">
         <input type="text" id="title" class="form-control" name="title" value="<?php echo $post['title'] ; ?>"/>
@@ -19,12 +21,14 @@
         <input type="submit" class="btn btn-primary"/>
     </div>
 </form>
+    </div>
+</div>
+<div class="row bg-white">
+<h2>Commentaires associés</h2>
 
-<h2 class="color-glacier">Commentaires associés</h2>
-
-<table class="table">
-    <thead>
-    <tr class="color-glacier">
+<table class="table table-striped table-hover table-responsive table-admin">
+    <thead class="thead-dark">
+    <tr>
         <th scope="col">#</th>
         <th scope="col">Auteur</th>
         <th scope="col">Commentaire</th>
@@ -47,6 +51,7 @@
     <?php } ?>
     </tbody>
 </table>
+</div>
 
 <?php $content = ob_get_clean(); ?>
 

@@ -37,14 +37,14 @@
     </thead>
     <tbody>
     <?php while ($comment = $comments->fetch()){ ?>
-        <tr class="color-fauve">
+        <tr>
             <th scope="row"><?= $comment['id']; ?></th>
             <td><?= $comment['author'] ;?></td>
             <td><?= $comment['comment'] ; ?></td>
-            <td>
+            <td class="row text-right">
                 <a class="btn btn-danger" href="?page=deleteComment&id=<?= $comment['id']; ?>"><i class="fas fa-trash-alt"></i></a>
                 <?php if($comment['report'] == 1) { ?>
-                    <a class="btn btn-primary" href="?page=unReportComment&id=<?= $comment['id']; ?>"><i class="fas fa-bell-slash"></i></a>
+                    <a class="btn btn-primary button-right-space" href="?page=unReportComment&id=<?= $comment['id']; ?>"><i class="fas fa-bell-slash"></i></a>
                 <?php } ?>
             </td>
         </tr>
